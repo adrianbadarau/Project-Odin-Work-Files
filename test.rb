@@ -1,19 +1,14 @@
-user_name = ARGV.first
-prompt = '> '
+# This class stores information about people
+class Person
+  attr_accessor :age, :name, :gender
 
-puts "Hi #{user_name}."
-puts "I'd like to ask you a few questions."
-puts "Do you like me #{user_name}? ", prompt
-likes = $stdin.gets.chomp
+  #create the Person object and store the name
+  def initialize(name)
+    @name = name
+  end
 
-puts "Where do you live #{user_name}? ", prompt
-lives = $stdin.gets.chomp
-
-puts "What kind of computer do you have? ", prompt
-computer = $stdin.gets.chomp
-
-puts """
-Alright, so you said #{likes} about liking me.
-You live in #{lives}.  Not sure where that is.
-And you have a #{computer} computer.  Nice.
-"""
+  #Prints the person name to the screen
+  def print_name
+    puts "Person Called #{@name}"
+  end
+end
